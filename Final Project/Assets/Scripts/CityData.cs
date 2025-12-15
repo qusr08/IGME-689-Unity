@@ -1,14 +1,14 @@
 using UnityEngine;
 
-public class CityData
+public readonly struct CityData
 {
+	public readonly string Name;
 	public readonly Vector2 Coordinates;
 	public readonly int Population;
 
-	public MeshRenderer MeshRenderer { get; set; }
-
-	public CityData(Vector2 coordinates, int population)
+	public CityData(string name, Vector2 coordinates, int population)
 	{
+		Name = name;
 		Coordinates = coordinates;
 		Population = population;
 	}
